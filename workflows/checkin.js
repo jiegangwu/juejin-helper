@@ -255,7 +255,7 @@ class CheckIn {
     console.log(`运行 ${this.growthTask.taskName}`);
     await this.growthTask.run();
     console.log(`运行 ${this.dipLuckyTask.taskName}`);
-    // await this.dipLuckyTask.run();
+    await this.dipLuckyTask.run();
      console.log("禁用沾喜气");
     console.log(`运行 ${this.lotteriesTask.taskName}`);
     await this.lotteriesTask.run(this.growthTask, this.dipLuckyTask);
@@ -287,13 +287,13 @@ ${
     2: "今日已完成签到"
   }[this.growthTask.todayStatus]
 }
-// ${
-//   {
-//     0: "沾喜气失败",
-//     1: `沾喜气 +${this.dipLuckyTask.dipValue} 幸运值`,
-//     2: "今日已经沾过喜气"
-//   }[this.dipLuckyTask.dipStatus]
-// }
+${
+  {
+    0: "沾喜气失败",
+    1: `沾喜气 +${this.dipLuckyTask.dipValue} 幸运值`,
+    2: "今日已经沾过喜气"
+  }[this.dipLuckyTask.dipStatus]
+}
 ${
   this.bugfixTask.bugStatus === 1
     ? this.bugfixTask.collectBugCount > 0
